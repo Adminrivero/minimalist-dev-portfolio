@@ -4,8 +4,142 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Webpage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js">
 </head>
 <body>
-    Hello, world!
+    <header>
+        <div class="logo">
+            <img src="img/logodev_1.png" alt="{dev r2m}">
+        </div>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">My Services</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About me</a></li>
+                <li class="nav-item"><a href="#work" class="nav-link">My work</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Intro -->
+    <section class="intro" id="home">
+        <h1 class="section-title section-title--intro">Hi, I am <strong>Hector Rivero</strong></h1>
+        <p class="section-subtitle section-subtitle--intro">full-stack web developer</p>
+        <img src="img/dev-rivero-01.png" alt="a picture of myself">
+    </section>
+
+    <!-- My services -->
+    <section class="my-services" id="services">
+        <h2 class="section-title section-title--services">What I do</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Front-End Developer</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <div class="service">
+                <h3>Back-End Developer</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            
+            <div class="service">
+                <h3>Analyst Developer</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+
+        <a href="#work" class="btn">My Work</a>
+    </section>
+
+    <!-- About me -->
+    <section class="about-me" id="about">
+        <h2 class="section-title section-title--about">Who I am</h2>
+        <p class="section-subtitle section-subtitle--about"></p>
+
+        <div class="about-me--body">
+            <p></p>
+            <p></p>
+        </div>
+
+        <img src="img/dev-rivero-02.png" alt="About me picture">
+    </section>
+
+    <!-- My Work -->
+    <section class="my-work" id="work">
+        <h2 class="section-title">My Work</h2>
+        <p class="section-subtitle"></p>
+
+        <div class="portfolio">
+            <!-- Portfolio item 01 -->
+            <a href="#" class="portfolio-item">
+                <img src="img/portfolio-01.png" alt="image of work 01" class="portfolio-img">
+            </a>
+
+            <!-- Portfolio item 02 -->
+            <a href="#" class="portfolio-item">
+                <img src="img/portfolio-02.png" alt="image of work 02" class="portfolio-img">
+            </a>
+
+            <!-- Portfolio item 03 -->
+            <a href="#" class="portfolio-item">
+                <img src="img/portfolio-03.png" alt="image of work 03" class="portfolio-img">
+            </a>
+
+            <!-- Portfolio item 04 -->
+            <a href="#" class="portfolio-item">
+                <img src="img/portfolio-04.png" alt="image of work 04" class="portfolio-img">
+            </a>
+
+            <!-- Portfolio item 05 -->
+            <a href="#" class="portfolio-item">
+                <img src="img/portfolio-05.png" alt="image of work 05" class="portfolio-img">
+            </a>
+
+            <!-- Portfolio item 06 -->
+            <a href="#" class="portfolio-item">
+                <img src="img/portfolio-06.png" alt="image of work 06" class="portfolio-img">
+            </a>
+            <!-- Portfolio item 07 -->
+            <a href="#" class="portfolio-item">
+                <img src="img/portfolio-07.png" alt="image of work 07" class="portfolio-img">
+            </a>
+            <!-- Portfolio item 08 -->
+            <a href="#" class="portfolio-item">
+                <img src="img/portfolio-08.png" alt="image of work 08" class="portfolio-img">
+            </a>
+            <!-- Portfolio item 09 -->
+            <a href="#" class="portfolio-item">
+                <img src="img/portfolio-09.png" alt="image of work 09" class="portfolio-img">
+            </a>
+            <!-- Portfolio item 10 -->
+            <a href="#" class="portfolio-item">
+                <img src="img/portfolio-10.png" alt="image of work 10" class="portfolio-img">
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <a href="mailto:hrrm.1986lt@gmail.com" class="footer-link">hrrm.1986lt@gmail.com</a>
+        <ul class="social-list">
+            <li class="social-list-item"><a href="" class="social-list-link">Social 1</a></li>
+            <li class="social-list-item"><a href="" class="social-list-link">Social 2</a></li>
+            <li class="social-list-item"><a href="" class="social-list-link">Social 3</a></li>
+            <li class="social-list-item"><a href="" class="social-list-link">Social 4</a></li>
+        </ul>
+    </footer>
 </body>
 </html>
