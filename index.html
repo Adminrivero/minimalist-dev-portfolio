@@ -3,33 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Webpage</title>
+    <title>Hector Rivero - Portfolio</title>
+
+    <!-- link to normalize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js">
+    <!-- link to font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+    <!-- link to google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap">
+    <!-- link to my CSS file -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="img/logodev_1.png" alt="{dev r2m}">
+            <img src="img/hr-logo.png" alt="CodeSmart">
         </div>
+
         <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="nav-text">Menu</span>
             <span class="hamburger"></span>
         </button>
+
         <nav class="nav">
             <ul class="nav-list">
                 <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#services" class="nav-link">My Services</a></li>
-                <li class="nav-item"><a href="#about" class="nav-link">About me</a></li>
-                <li class="nav-item"><a href="#work" class="nav-link">My work</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">Portfolio</a></li>
+                <li class="nav-item"><a href="#work" class="nav-link">Contact</a></li>
+            </ul>
+
+            <ul class="nav-social-list">
+                <li class="nav-social-item">
+                    <a href="https://github.com/Adminrivero" class="nav-social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li class="nav-social-item">
+                    <a href="https://www.linkedin.com/in/hector-rivero-marquez-198608" class="nav-social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="nav-social-item">
+                    <a href="https://codepen.io" class="nav-social-link">
+                        <i class="fab fa-codepen"></i>
+                    </a>
+                </li>
+                <li class="nav-social-item">
+                    <a href="mailto:hrrm.1986lt@gmail.com" class="nav-social-link">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
 
     <!-- Intro -->
     <section class="intro" id="home">
-        <h1 class="section-title section-title--intro">Hi, I am <strong>Hector Rivero</strong></h1>
+        <h1 class="section-title section-title--intro">
+            Hi, I am <strong>Hector Rivero</strong>
+        </h1>
         <p class="section-subtitle section-subtitle--intro">full-stack web developer</p>
-        <img src="img/dev-rivero-01.png" alt="a picture of myself">
+        <img src="img/dev-rivero-01.jpg" alt="picture of myself" class="intro-img">
     </section>
 
     <!-- My services -->
@@ -53,7 +88,7 @@
             </div>
             
             <div class="service">
-                <h3>Analyst Developer</h3>
+                <h3>System Analyst</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. 
                     Ut enim ad minim veniam, quis nostrud exercitation
@@ -61,85 +96,133 @@
             </div>
         </div>
 
-        <a href="#work" class="btn">My Work</a>
+        <a href="#work" class="btn btn-round">My Work</a>
     </section>
 
     <!-- About me -->
     <section class="about-me" id="about">
         <h2 class="section-title section-title--about">Who I am</h2>
-        <p class="section-subtitle section-subtitle--about"></p>
+        <p class="section-subtitle section-subtitle--about">Software developer based out of Toronto</p>
 
         <div class="about-me--body">
-            <p></p>
-            <p></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
 
-        <img src="img/dev-rivero-02.png" alt="About me picture">
+        <img src="img/dev-rivero-02.jpg" alt="About me picture" class="about-me--img">
     </section>
 
     <!-- My Work -->
     <section class="my-work" id="work">
-        <h2 class="section-title">My Work</h2>
-        <p class="section-subtitle"></p>
+        <h2 class="section-title section-title--work">My Work</h2>
+        <p class="section-subtitle section-subtitle--work">Hand-picked collection of my most recent works.</p>
 
         <div class="portfolio">
             <!-- Portfolio item 01 -->
-            <a href="#" class="portfolio-item">
-                <img src="img/portfolio-01.png" alt="image of work 01" class="portfolio-img">
-            </a>
+            <div class="portfolio-item">
+                <a href="#" class="portfolio-link">
+                    <img src="img/pf-default-image.jpg" alt="image of work 01" class="portfolio-img">
+                    <div class="portfolio-text">
+                        <div class="portfolio-item-title">Work Title</div>
+                        <span class="portfolio-item-subtitle">Work Subtitle</span>
+                    </div>
+                </a>
+            </div>
 
             <!-- Portfolio item 02 -->
-            <a href="#" class="portfolio-item">
-                <img src="img/portfolio-02.png" alt="image of work 02" class="portfolio-img">
-            </a>
+            <div class="portfolio-item">
+                <a href="#" class="portfolio-link">
+                    <img src="img/pf-default-image.jpg" alt="image of work 02" class="portfolio-img">
+                    <div class="portfolio-text">
+                        <div class="portfolio-item-title">Work Title</div>
+                        <span class="portfolio-item-subtitle">Work Subtitle</span>
+                    </div>
+                </a>
+            </div>
 
             <!-- Portfolio item 03 -->
-            <a href="#" class="portfolio-item">
-                <img src="img/portfolio-03.png" alt="image of work 03" class="portfolio-img">
-            </a>
+            <div class="portfolio-item">
+                <a href="#" class="portfolio-link">
+                    <img src="img/pf-default-image.jpg" alt="image of work 03" class="portfolio-img">
+                    <div class="portfolio-text">
+                        <div class="portfolio-item-title">Work Title</div>
+                        <span class="portfolio-item-subtitle">Work Subtitle</span>
+                    </div>
+                </a>
+            </div>
 
             <!-- Portfolio item 04 -->
-            <a href="#" class="portfolio-item">
-                <img src="img/portfolio-04.png" alt="image of work 04" class="portfolio-img">
-            </a>
+            <div class="portfolio-item">
+                <a href="#" class="portfolio-link">
+                    <img src="img/pf-default-image.jpg" alt="image of work 04" class="portfolio-img">
+                    <div class="portfolio-text">
+                        <div class="portfolio-item-title">Work Title</div>
+                        <span class="portfolio-item-subtitle">Work Subtitle</span>
+                    </div>
+                </a>
+            </div>
 
             <!-- Portfolio item 05 -->
-            <a href="#" class="portfolio-item">
-                <img src="img/portfolio-05.png" alt="image of work 05" class="portfolio-img">
-            </a>
+            <div class="portfolio-item">
+                <a href="#" class="portfolio-link">
+                    <img src="img/pf-default-image.jpg" alt="image of work 05" class="portfolio-img">
+                    <div class="portfolio-text">
+                        <div class="portfolio-item-title">Work Title</div>
+                        <span class="portfolio-item-subtitle">Work Subtitle</span>
+                    </div>
+                </a>
+            </div>
 
             <!-- Portfolio item 06 -->
-            <a href="#" class="portfolio-item">
-                <img src="img/portfolio-06.png" alt="image of work 06" class="portfolio-img">
-            </a>
-            <!-- Portfolio item 07 -->
-            <a href="#" class="portfolio-item">
-                <img src="img/portfolio-07.png" alt="image of work 07" class="portfolio-img">
-            </a>
-            <!-- Portfolio item 08 -->
-            <a href="#" class="portfolio-item">
-                <img src="img/portfolio-08.png" alt="image of work 08" class="portfolio-img">
-            </a>
-            <!-- Portfolio item 09 -->
-            <a href="#" class="portfolio-item">
-                <img src="img/portfolio-09.png" alt="image of work 09" class="portfolio-img">
-            </a>
-            <!-- Portfolio item 10 -->
-            <a href="#" class="portfolio-item">
-                <img src="img/portfolio-10.png" alt="image of work 10" class="portfolio-img">
-            </a>
+            <div class="portfolio-item">
+                <a href="#" class="portfolio-link">
+                    <img src="img/pf-default-image.jpg" alt="image of work 06" class="portfolio-img">
+                    <div class="portfolio-text">
+                        <div class="portfolio-item-title">Work Title</div>
+                        <span class="portfolio-item-subtitle">Work Subtitle</span>
+                    </div>
+                </a>
+            </div>
         </div>
+
+        <a href="#work" class="btn btn-round">View all Works</a>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <a href="mailto:hrrm.1986lt@gmail.com" class="footer-link">hrrm.1986lt@gmail.com</a>
+    <footer class="footer">
+        <a href="#" class="footer-logo--link">
+            <img src="img/hr-logo.png" alt="Logo image" class="footer-logo-img">
+        </a>
+        <a href="mailto:hrrm.1986lt@gmail.com" class="footer-email--link">hrrm.1986lt@gmail.com</a>
         <ul class="social-list">
-            <li class="social-list-item"><a href="" class="social-list-link">Social 1</a></li>
-            <li class="social-list-item"><a href="" class="social-list-link">Social 2</a></li>
-            <li class="social-list-item"><a href="" class="social-list-link">Social 3</a></li>
-            <li class="social-list-item"><a href="" class="social-list-link">Social 4</a></li>
+            <li class="social-list-item">
+                <a href="https://github.com/Adminrivero" class="social-list-link">
+                    <i class="fab fa-github"></i>
+                </a>
+            </li>
+            <li class="social-list-item">
+                <a href="https://www.linkedin.com/in/hector-rivero-marquez-198608" class="social-list-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </li>
+            <li class="social-list-item">
+                <a href="https://codepen.io" class="social-list-link">
+                    <i class="fab fa-codepen"></i>
+                </a>
+            </li>
         </ul>
     </footer>
+
+    <!-- Back to Top Button -->
+    <a class="btn-to-top " href="#"><i class="fas fa-chevron-up"></i></a>
+    <!-- Backdrop -->
+    <div class="site-backdrop"></div>
+
+    <!-- link to index.js file -->
+    <script src="js/index.js"></script>
 </body>
 </html>
