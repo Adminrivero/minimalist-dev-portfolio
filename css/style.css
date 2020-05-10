@@ -11,9 +11,11 @@
     --ff-secondary: 'Source Code Pro', monospace;
     /* setup font weight: regular, bold */
     --fw-reg: 300;
+    --fw-semi-bold: 600;
     --fw-bold: 900;
     /* setup custom colors */
     --clr-light: #fff;
+    --clr-gray: #f5f5f5;
     --clr-dark: #343b43;
     --clr-darker: #30363D;
     --clr-accent: #ac32e4;
@@ -23,12 +25,15 @@
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
-    --fs-h4: 1.1rem;
-    --fs-h5: .8rem;
+    --fs-h4: .75rem;
+    --fs-h5: .25rem;
     --fs-body: 1rem;
+    --fs-small: .6rem;
     /* box shadow */
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
           0.125em 0.125em 0.25em rgba(0,0,0,.15);
+    /* text shadow */
+    --ts: 0 0.625rem 1.5rem rgba(0,0,0,0.2);
     /* background gradient */
     --bg-gradient: linear-gradient(to right, #ac32e4 0%, #ac32e4 20%, #e833b0 100%) !important;
 }
@@ -39,9 +44,10 @@
         --fs-h1: 4.5rem;
         --fs-h2: 3.75rem;
         --fs-h3: 1.5rem;
-        --fs-h4: 1.15rem;
-        --fs-h5: 1rem;
+        --fs-h4: 1.25rem;
+        --fs-h5: .5rem;
         --fs-body: 1.125rem;
+        --fs-small: .725rem;
     }
 }
 
@@ -132,10 +138,8 @@ strong {
     display: block;
     margin-left: auto;
     margin-right: auto;
-  }
+}
 
-/* make the name in the introductory title always start on a new line
-(refers to the tag strong nested inside the h1 element) */
 .section-title--intro strong {
     display: block;
 }
@@ -155,21 +159,19 @@ strong {
     margin-bottom: 1em;
 }
 
+.bg-dark { background-color: var(--clr-dark); }
+.bg-darker { background-color: var(--clr-darker); }
+
 /**********/
 /* Header */
 /**********/
-
 header {
     display: flex;
     justify-content: space-between;
     padding: 1em;
 }
 
-.logo {
-    max-width: 200px;
-}
-
-.nav {
+.nav-cm {
     position: fixed;
     background-color: var(--clr-light);
     background-image: url(../img/dev-rivero-nav-bg.png);
@@ -184,7 +186,7 @@ header {
     transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
 }
 
-.nav-list {
+.nav-cm-list {
     list-style: none;
     display: flex;
     height: 100%;
@@ -195,18 +197,18 @@ header {
     padding: 0;
 }
 
-.nav-item {
+.nav-cm-item {
     margin: .9em;
 }
 
-.nav-link {
+.nav-cm-link {
     color: inherit;
     font-weight: var(--fw-bold);
     font-size: var(--fs-h3);
     text-decoration: none;
 }
 
-.nav-link:hover {
+.nav-cm-link:hover {
     color: var(--clr-accent);
 }
 
@@ -248,7 +250,7 @@ header {
     cursor: pointer;
     position: absolute;
     right: 2em;
-    top: 1.5em;
+    top: .7em;
     z-index: 1000;
 }
 
@@ -275,7 +277,7 @@ header {
 
 }
 
-.nav-open .nav {
+.nav-open .nav-cm {
     transform: translateX(0);
 }
 
@@ -482,6 +484,7 @@ header {
 
 .my-work {
     background-color: var(--clr-dark);
+    opacity: .9;
     color: var(--clr-light);
     text-align: center;
 }
@@ -578,8 +581,6 @@ header {
 /**********/
 
 .footer {
-    background-color: var(--clr-darker);
-    background-color: #111;
     color: var(--clr-light);
     text-align: center;
     padding: 2.5em 0;
@@ -588,8 +589,32 @@ header {
 .footer-logo--link {
     display: flex;
     justify-content: center;
-    margin-bottom: 1.2em;
+    margin-bottom: 1em;
     padding: 0;
+}
+
+.footer-logo--link span {
+    font-weight: 600;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.footer-logo--link .lastname {
+    color: var(--clr-dark);
+    background-color: white;
+    margin-left: .4rem;
+    padding: 0 .4rem;
+}
+
+.footer-logo--link .lastname {
+    margin-left: .4rem;
+    font-weight: 600;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    background-color: white;
+    padding: 0 .4rem;
 }
 
 .footer a {
@@ -627,7 +652,7 @@ header {
 }
 
 /* Back to Top Button */
-.btn-to-top {
+#btnToTop {
     display: block;
     position: fixed;
     font-size: var(--fs-h4);
@@ -648,19 +673,40 @@ header {
     text-decoration: none;
 }
 
-.btn-to-top > i {
+#btnToTop > i {
     line-height: 45px;
 }
 
-.btn-to-top:hover {
+#btnToTop:hover {
     background: var(--bg-gradient);
 }
 
-.btn-to-top:focus {
+#btnToTop:focus {
     outline: none;
 }
 
-.btn-to-top.visible {
+#btnToTop.visible {
     bottom: 1rem;
     opacity: 1;
+}
+
+
+/**************/
+/* About page */
+/**************/
+
+.page-title {
+    background-image: url(../img/page-title-pattern.png);
+}
+
+.my-workflow {
+    max-width: 1170px;
+}
+
+.my-skills > .container-fluid {
+    max-width: 1400px;
+}
+
+.my-contact > .container {
+    background-image: url(../img/dotted-map.png);
 }
