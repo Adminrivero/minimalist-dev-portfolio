@@ -1,0 +1,525 @@
+/* Font families */
+/* Font weight */
+/* Theme colors */
+/* Theme gradient */
+/* Options */
+/* spacing */
+/* Screen Breakpoints */
+/* Font sizes */
+/* 9px */
+/* 11px */
+/* 12px */
+/* 14px */
+/* 16px */
+/* 16px */
+/* 20px */
+/* 24px */
+/* 28px */
+/* Headings */
+/* 48px */
+/* 40px */
+/* 34px */
+/* 26px */
+/* 21px */
+/* 18px */
+/* Display headings */
+/* 96px */
+/* 88px */
+/* 72px */
+/* 56px */
+/* Lead text */
+/**************/
+/* Typography */
+/**************/
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-top: 0;
+  margin-bottom: 0.75;
+  color: #343b43;
+  font-weight: 900;
+  letter-spacing: 0.021em;
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small,
+.h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small {
+  display: block;
+  padding-top: 3px;
+  color: #8c8c8c;
+}
+
+h1, .h1 {
+  line-height: 1.2;
+  font-size: 3rem;
+}
+
+h2, .h2 {
+  line-height: 1.2;
+  font-size: 2.5rem;
+}
+
+h3, .h3 {
+  line-height: 1.25;
+  font-size: 2.125rem;
+}
+
+h4, .h4 {
+  line-height: 1.3;
+  font-size: 1.625rem;
+}
+
+h5, .h5 {
+  line-height: 1.35;
+  font-size: 1.313rem;
+}
+
+h6, .h6 {
+  line-height: 1.4;
+  font-size: 1.125rem;
+}
+
+.display-1, .display-2,
+.display-3, .display-4 {
+  margin-bottom: 0.75;
+  letter-spacing: 0.021em;
+}
+
+.text-muted {
+  color: #8c8c8c !important;
+}
+
+/* Text sizes */
+.lead {
+  font-size: 1.5rem !important;
+}
+
+.text-xl {
+  font-size: 1.5rem !important;
+}
+
+.text-lg {
+  font-size: 1.25rem !important;
+}
+
+.text-md {
+  font-size: 0.875rem !important;
+}
+
+.text-sm {
+  font-size: 0.75rem !important;
+}
+
+.text-xs {
+  font-size: 0.6875rem !important;
+}
+
+/* Responsive typography */
+@media (max-width: 800px) {
+  .display-1 {
+    font-size: 3.9rem;
+  }
+
+  .display-2 {
+    font-size: 3.85rem;
+  }
+
+  .display-3 {
+    font-size: 3.5rem;
+  }
+
+  .display-4 {
+    font-size: 3.4rem;
+  }
+
+  h1, .h1 {
+    font-size: 2.4rem;
+  }
+
+  h2, .h2 {
+    font-size: 2.125rem;
+  }
+
+  h3, .h3 {
+    font-size: 1.9125rem;
+  }
+}
+/* Box shadow */
+/* Background color & gradient */
+.bg-secondary {
+  background-color: #f5f5f5 !important;
+}
+
+.bg-gradient, .workflow .workflow-title::after, .section-title::after {
+  background: #ac32e4 !important;
+  background: -webkit-gradient(linear, left top, right top, from(#ac32e4), color-stop(20%, #ac32e4), to(#e833b0 !important)) !important;
+  background: linear-gradient(to right, #ac32e4 0%, #ac32e4 20%, #e833b0 !important 100%) !important;
+}
+
+/* Progress Bars */
+.bg-accent {
+  background-color: #e833b0 !important;
+}
+
+.bg-info {
+  background-color: #5695fe !important;
+}
+
+.bg-success {
+  background-color: #33cb81 !important;
+}
+
+.bg-warning {
+  background-color: #fc8c3a !important;
+}
+
+.bg-danger {
+  background-color: #ff5252 !important;
+}
+
+.bg-dark {
+  background-color: #343b43;
+}
+
+/* Flex alignment options */
+.align-self-center {
+  align-self: center !important;
+}
+
+/* Placeholders */
+.workflow .workflow-title::after, .section-title::after {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 1px;
+  width: 36px;
+  height: 2px;
+  content: "";
+}
+
+/**************/
+/* Page Title */
+/**************/
+.page-title {
+  min-height: 200px;
+  padding-top: 1.9rem;
+  padding-bottom: 1.9rem;
+  background-position: center center;
+  background-color: #f5f5f5;
+  background-repeat: no-repeat;
+  border-top: 1px solid #e7e7e7;
+}
+.page-title nav {
+  line-height: 1.2;
+}
+.page-title .page-title-heading {
+  font-size: 2.75rem;
+  letter-spacing: 0.034em;
+  line-height: 1.2;
+  text-shadow: 0 0.625rem 1.5rem rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  word-break: break-all;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0 0;
+  margin-bottom: 0.25rem;
+  background-color: transparent;
+  text-transform: uppercase;
+}
+.breadcrumb .breadcrumb-item {
+  position: relative;
+}
+.breadcrumb .breadcrumb-item::before {
+  color: #ac32e4;
+}
+.breadcrumb .breadcrumb-item > a {
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  color: var(--clr-accent);
+}
+.breadcrumb .breadcrumb-item > a:hover {
+  text-decoration: underline;
+}
+
+/*****************/
+/* Section Title */
+/*****************/
+.section-title {
+  position: relative;
+  padding-bottom: 0.8125rem;
+}
+.section-title > small {
+  padding: 0.5rem 0 0.3125rem 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: normal;
+  letter-spacing: 0;
+}
+.section-title.text-white::after {
+  background: #ffffff !important;
+}
+
+.text-center .section-title::after, .text-center.section-title::after {
+  left: 50%;
+  margin-left: -1.125rem;
+}
+
+/****************/
+/*   Workflow   */
+/****************/
+.workflow {
+  position: relative;
+}
+.workflow .workflow-title {
+  position: relative;
+  margin: 0;
+  padding-bottom: 1.25rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.workflow .workflow-text {
+  margin: 0;
+  padding-top: 1.625rem;
+  color: #8c8c8c;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.75rem;
+}
+.workflow .workflow-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.625rem 0;
+  transform: translateY(-5px);
+  transition: all 0.3s;
+  color: #ac32e4;
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  opacity: 0;
+}
+.workflow .workflow-link > i {
+  display: inline-block;
+  margin-left: 0.125rem;
+  transition: all 0.25s;
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+.workflow .workflow-link:hover > i {
+  transform: translateX(3px);
+}
+.workflow:hover .workflow-link {
+  transform: translateY(0);
+  opacity: 1;
+}
+.workflow.text-center .workflow-title::after {
+  left: 50%;
+  margin-left: -18px;
+}
+.workflow.workflow-add-icon {
+  padding-top: 2.375rem;
+  text-align: center;
+}
+.workflow.workflow-add-icon .workflow-icon {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin-right: auto;
+  margin-bottom: 1.75rem;
+  margin-left: auto;
+  border-radius: 50%;
+  color: #ac32e4;
+  font-size: 2.3rem;
+  line-height: 140px;
+  text-align: center;
+  z-index: 5;
+}
+.workflow.workflow-add-icon .workflow-icon > img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: 48px;
+  margin-left: -24px;
+  transform: translateY(-50%);
+}
+.workflow.workflow-add-icon .workflow-icon::before, .workflow.workflow-add-icon .workflow-icon::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  border-radius: 50%;
+  content: "";
+}
+.workflow.workflow-add-icon .workflow-icon::before {
+  transform: scale(0);
+  background-color: rgba(172, 50, 228, 0.1);
+  opacity: 0;
+}
+.workflow.workflow-add-icon .workflow-icon::after {
+  border: 1px dashed rgba(172, 50, 228, 0.3);
+}
+.workflow.workflow-add-icon .workflow-title::after {
+  left: 50%;
+  margin-left: -18px;
+}
+.workflow.workflow-add-icon:hover .workflow-icon::before {
+  transform: scale(1);
+  opacity: 1;
+}
+.workflow.workflow-add-icon:hover .workflow-icon::after {
+  top: -40%;
+  left: -40%;
+  width: 180%;
+  height: 180%;
+}
+
+/**************/
+/*   Skills   */
+/**************/
+.my-skills .info img {
+  display: inline-flex;
+  height: 200px;
+}
+.my-skills .info .media-body > p {
+  font-size: 1.125rem;
+  font-family: "Open Sans", sans-serif;
+  opacity: 0.8 !important;
+}
+.my-skills .techn > p {
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+/****************/
+/*   Progress   */
+/****************/
+@keyframes animateBar {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.progress > .animated {
+  animation-name: animateBar;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+}
+
+.progress {
+  display: flex;
+  height: 2rem;
+  overflow: hidden;
+  font-size: 0.75rem;
+  background-color: #e7e7e7;
+  box-shadow: none;
+}
+
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #ac32e4;
+}
+.progress-bar > span {
+  position: absolute;
+}
+
+.progress.progress-light-skin {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.progress-bar {
+  padding-left: 0.625rem;
+  transition: width 1s ease;
+  overflow: hidden;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: left;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.15);
+}
+.progress-bar i {
+  display: inline-block;
+  margin-top: -1px;
+  margin-right: 6px;
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+.progress-bar .text-white {
+  color: #ffffff;
+}
+.progress-bar .text-white i {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/**************/
+/*   Table   */
+/**************/
+.table tr {
+  border-top: 1px solid #e7e7e7;
+}
+.table th, .table td {
+  vertical-align: middle;
+}
+.table .f-row {
+  width: 1%;
+  white-space: nowrap;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+.table .tech-cell {
+  display: table-cell;
+  height: auto;
+  padding: 0 0.4rem;
+  vertical-align: middle;
+  text-align: center;
+}
+.table .tech-cell > img {
+  display: block;
+  max-height: 64px;
+}
+.table .tech-cell > span {
+  display: none;
+  font-family: "Source Code Pro", monospace;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.table .tech-cell:hover > img {
+  height: 72px;
+  width: auto;
+}
+.table .tech-cell:hover > span {
+  display: contents;
+  position: absolute;
+}
+
+/*******************/
+/* Section Contact */
+/*******************/
+.my-contact > div {
+  background-size: contain;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+.my-contact > div > h3 > small {
+  color: #e7e7e7;
+  letter-spacing: 0.3rem;
+}
+.my-contact > div > a {
+  margin-top: 1rem;
+}
+
+/*# sourceMappingURL=style.theme.css.map */

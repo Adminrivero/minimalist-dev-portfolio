@@ -1,0 +1,371 @@
+/**************/
+/* Page Title */
+/**************/
+.page-title {
+    min-height: 200px;
+    padding: {
+        top: 1.9rem;
+        bottom: 1.9rem;
+    }
+    background: {
+        position: center center;
+        color: $gray-100;
+        repeat: no-repeat;
+    }
+    border: {
+        top: 1px solid $gray-300;
+    }
+    nav { line-height: 1.2; }
+    .page-title-heading {
+        font-size: 2.75rem;
+        letter-spacing: .034em;
+        line-height: $h2-line-height;
+        text-shadow: $heading-ts;
+        text-transform: uppercase;
+        word-break: break-all;
+    }
+}
+/* Breadcrumb */
+.breadcrumb {
+    font: {
+        size: $fs-sm;
+        weight: $fw-semi-bold;
+    }
+    padding: 0 0;
+    margin-bottom: .25rem;
+    background-color: transparent;
+    text-transform: uppercase;
+    .breadcrumb-item {
+        position: relative;
+        &::before {
+            color: $color-primary;
+        }
+        > a {
+            text-decoration: none;
+            letter-spacing: .08em;
+            color: var(--clr-accent);
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+/*****************/
+/* Section Title */
+/*****************/
+.section-title {
+    position: relative;
+    padding-bottom: .8125rem;
+    &::after { @extend %divider; }
+    > small {
+        padding: .5rem 0 .3125rem 0;
+        font: {
+            family: $secondary-font;
+            size: $fs-md;
+            weight: normal;
+        }
+        letter-spacing: 0;
+    }
+    &.text-white::after { background: $white !important; }
+}
+// Alignment
+.text-center {
+    .section-title,
+    &.section-title {
+        &::after {
+            left: 50%;
+            margin-left: -1.125rem;
+        }
+    }
+}
+
+/****************/
+/*   Workflow   */
+/****************/
+.workflow {
+    position: relative;
+    .workflow-title {
+        position: relative;
+        margin: 0;
+        padding-bottom: 1.25rem;
+        font: {
+            size: $fs-lg;
+            weight: 700;
+        }
+        &::after { @extend %divider; }
+    }
+    .workflow-text {
+        margin: 0;
+        padding-top: 1.625rem;
+        color: $gray-500;
+        font: {
+            family: $secondary-font;
+            size: $fs-sm;
+        }
+    }
+    .workflow-link {
+        display: inline-block;
+        margin-top: ($spacer / 2);
+        padding: ($spacer * .625) 0;
+        transform: translateY(-5px);
+        transition: all .3s;
+        color: $color-primary;
+        font: {
+            size: $fs-sm;
+            weight: bold;
+        }
+        letter-spacing: .1em;
+        text-decoration: none;
+        opacity: 0;
+        > i {
+            display: inline-block;
+            margin-left: ($spacer / 8);
+            transition: all .25s;
+            font-size: 1.2em;
+            vertical-align: middle;
+        }
+        &:hover > i { transform: translateX(3px); }
+    }
+    &:hover {
+        .workflow-link {
+            transform: translateY(0);
+            opacity: 1;
+        }
+      }
+      &.text-center {
+        .workflow-title::after {
+            left: 50%;
+            margin-left: -18px;
+        }
+    }
+
+    // With Icon
+    &.workflow-add-icon {
+        padding-top: 2.375rem;
+        text-align: center;
+        .workflow-icon {
+            position: relative;
+            width: 140px;
+            height: 140px;
+            margin: {
+                right: auto;
+                bottom: ($spacer * 1.75);
+                left: auto;
+            }
+            border-radius: 50%;
+            color: $color-primary;
+            font-size: ($fs-base * 2.3);
+            line-height: 140px;
+            text-align: center;
+            z-index: 5;
+            > img {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 100%;
+                max-width: 48px;
+                margin-left: -24px;
+                transform: translateY(-50%);
+            }
+            &::before, &::after {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                transition: all .4s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+                border-radius: 50%;
+                content: '';
+            }
+            &::before {
+                transform: scale(0);
+                background-color: rgba($color-primary, .1);
+                opacity: 0;
+            }
+            &::after { border: 1px dashed rgba($color-primary, .3); }
+        }
+        .workflow-title::after {
+            left: 50%;
+            margin-left: -18px;
+        }
+        &:hover .workflow-icon {
+            &::before {
+                transform: scale(1);
+                opacity: 1;
+            }
+            &::after {
+                top: -40%;
+                left: -40%;
+                width: 180%;
+                height: 180%;
+            }
+        }
+    }
+}
+
+/**************/
+/*   Skills   */
+/**************/
+.my-skills {
+    .info {
+        img {
+            display: inline-flex;
+            height: 200px;
+        }
+        .media-body {
+            > p {
+                font: {
+                    size: $fs-reg;
+                    family: $secondary-font;
+                }
+                opacity: .8 !important;
+            }
+        }
+    }
+    .techn {
+        > p {
+            font: {
+                size: $fs-base;
+                family: $secondary-font;
+            }
+        }
+    }
+}
+
+/****************/
+/*   Progress   */
+/****************/
+@if $enable-transitions {
+    @keyframes animateBar {
+        0% { transform: translateX(-100%); }
+        100% {transform: translateX(0); }
+    }
+    .progress {
+        > .animated {
+            animation-name: animateBar;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in;
+            animation-duration: .5s;
+        }
+    }
+}
+.progress {
+    display: flex;
+    height: $progress-height;
+    overflow: hidden;
+    font-size: $progress-font-size;
+    background-color: $progress-bg;
+    @include box-shadow($progress-box-shadow);
+}
+.progress-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $progress-bar-color;
+    @include progress-bar-font($progress-font-size, $fw-semi-bold);
+    text-align: center;
+    white-space: nowrap;
+    background-color: $progress-bar-bg;
+    > span {
+        position: absolute;
+    }
+}
+// Custom style
+.progress {
+    &.progress-light-skin { background-color: $progress-light-bg !important; }
+}
+.progress-bar {
+    padding-left: .625rem;
+    transition: width 1s ease;
+    overflow: hidden;
+    font: {
+        size: $fs-sm;
+        weight: 600;
+    }
+    text-align: left;
+    box-shadow: $progress-bar-box-shadow;
+    i {
+        display: inline-block;
+        margin: {
+            top: -1px;
+            right: 6px;
+        }
+        font-size: 1.2em;
+        vertical-align: middle;
+    }
+    .text-white {
+        color: $white;
+        i { color: rgba($white, .5); }
+    }
+}
+
+/**************/
+/*   Table   */
+/**************/
+.table {
+    tr { 
+        border-top: 1px solid $gray-300;
+    }
+    th, td { vertical-align: middle; }
+    .f-row {
+        width: 1%;
+        white-space: nowrap;
+        font-size: $fs-reg;
+        font-weight: $fw-semi-bold;
+    }
+    .tech-cell {
+        display: table-cell;
+        height: auto;
+        padding: 0 .4rem;
+        vertical-align: middle;
+        text-align: center;
+        > img {
+            display: block;
+            max-height: 64px;
+        }
+        > span {
+            // opacity: 0;
+            display: none;
+            font: {
+                family: $code-font;
+                size: $fs-base;
+                weight: $fw-semi-bold;
+            }
+        }
+        &:hover {
+            > img {
+                height: 72px;
+                width: auto;
+            }
+            > span {
+                // display: inline-flex;
+                // margin-left: -.3rem;
+                display: contents;
+                position: absolute;
+            }
+        }
+    }
+}
+
+/*******************/
+/* Section Contact */
+/*******************/
+.my-contact {
+    > div {
+        background-size: contain;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        > h3 {
+            > small {
+                color: $gray-300;
+                letter-spacing: .3rem;
+            }
+        }
+        > a {
+            margin-top: $spacer;
+        }
+    }
+}
