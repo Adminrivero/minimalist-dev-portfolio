@@ -31,10 +31,6 @@ $color-success: #33cb81 !important;
 $color-warning: #fc8c3a !important;
 $color-danger: #ff5252 !important;
 
-/* Theme gradient */
-$gc-1: $color-primary !default;
-$gc-2: $color-accent !default;
-
 /* Options */
 $enable-shadows:      false;
 $enable-rounded:      false;
@@ -56,6 +52,7 @@ $fs-reg: 1.125rem;  /* 16px */
 $fs-lg: 1.25rem;    /* 20px */
 $fs-xl: 1.5rem;     /* 24px */
 $fs-xxl: 1.75rem;   /* 28px */
+$fs-social-button: ($fs-base * 2.25) !default;
 
 /* Headings */
 $body-fs: $fs-base;
@@ -147,19 +144,31 @@ h6, .h6 { line-height: $h6-line-height; font-size: $h6-fs; }
   h3, .h3 { font-size: $h3-fs * .9; }
 }
 
+/* Border */
+$border-color: $gray-300;
+$border-light-color: rgba($white, .14) !default;
+$border-radius: .3rem;
+
 /* Box shadow */
 $box-shadow: 0 1.375rem 2.25rem -.75rem rgba($gray-700, .13);
 $box-shadow-pressed: 0 .625rem 1.5rem -.625rem rgba($gray-700, .22) !default;
 $box-shadow-inset: inset 0 1.25rem 1.875rem -.75rem rgba($gray-700, .12) !default;
+$box-shadow-social-button: 0 .75rem 1.25rem .0625rem rgba($gray-700, .11) !default;
+$box-shadow-contact-form: 0 1.1rem 1.25rem 0.0625rem rgba(64,64,64,0.09);
 
 /* Background color & gradient */
 .bg-secondary {
   background-color: $gray-100 !important;
 }
+.bg-priamry {
+  background: $color-primary !important;
+}
 .bg-gradient {
-  background: $gc-1 !important;
-  background: -webkit-gradient(linear, left top, right top, from($gc-1), color-stop(20%, $gc-1), to($gc-2)) !important;
-  background: linear-gradient(to right, $gc-1 0%, $gc-1 20%, $gc-2 100%) !important;
+  background: -webkit-gradient(linear, left top, right top, from(#ac32e4), color-stop(20%, #ac32e4), to(#e833b0)) !important;
+  background: linear-gradient(to right, #ac32e4 0%, #ac32e4 20%, #e833b0 100%) !important;
+}
+.btn-gradient {
+  background: linear-gradient(to right, #ac32e4 0%, #ac32e4 20%, #e833b0 100%) !important;
 }
 
 /* Progress Bars */
@@ -207,3 +216,50 @@ $progress-bar-bg: $color-primary;
   @extend .bg-gradient;
   content: '';
 }
+
+/* Forms */
+$input-padding-x:             .9375rem;
+$input-padding-y:             .5rem;
+$input-padding-x-sm:          $input-padding-x;
+$input-height-lg:							54px;
+$input-height:								44px;
+$input-height-sm:							32px;
+$input-border-width:          1px;
+$input-border-color:          darken($border-color, 1%);
+$input-color:                 $gray-700;
+$input-placeholder-color:     $gray-500;
+$input-transition:            border-color .2s ease-in-out, box-shadow .2s ease-in-out, background-color .2s ease-in-out;
+$input-box-shadow:            0 9px 24px -4px rgba($gray-700, .16);
+$input-focus-border-color:    $white;
+$input-disabled-bg:           $gray-100;
+$form-group-margin-bottom:    ($spacer * 1.5);
+
+/* Buttons */
+$btn-height-lg:               54px !default;
+$btn-height:                  44px !default;
+$btn-height-sm:               32px !default;
+$btn-height-xs:               24px !default;
+$btn-padding-y:               0;
+$btn-padding-x:               1.75rem;
+$btn-line-height:             $btn-height;
+$btn-padding-y-xs:            0 !default;
+$btn-padding-x-xs:            .75rem !default;
+$btn-line-height-xs:          $btn-height-xs !default;
+$btn-padding-y-sm:            0;
+$btn-padding-x-sm:            1.25rem;
+$btn-line-height-sm:          $btn-height-sm;
+$btn-padding-y-lg:            0;
+$btn-padding-x-lg:            2rem;
+$btn-line-height-lg:          $btn-height-lg;
+$button-font-size-lg:         ($fs-base * .8125) !default;
+$button-font-size:            $fs-md !default;
+$button-font-size-sm:         ($fs-base * .6875) !default;
+$button-font-size-xs:         $fs-xs !default;
+$btn-font-weight:             bold;
+$btn-text-transform:          uppercase !default;
+$btn-letter-spacing:          .1em !default;
+$btn-transition:              all .3s !important;
+$btn-box-shadow:              none;
+$btn-focus-box-shadow:        none;
+$btn-active-box-shadow:       none;
+$btn-disabled-opacity:        .5;

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hector Rivero - Portfolio</title>
+    <title>Hector Rivero - Contact me</title>
 
     <!-- link to normalize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
@@ -11,8 +11,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
     <!-- link to google fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap">
-    <!-- link to my CSS files -->
+    <!-- link to bootstrap 4.4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- link to custom style file -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- link to theme style file -->
+    <link rel="stylesheet" href="css/style.theme.css">
     <!-- link to logo style file -->
     <link rel="stylesheet" href="css/logo.css">
 </head>
@@ -70,10 +74,10 @@
 
         <nav class="nav-cm">
             <ul class="nav-cm-list">
-                <li class="nav-cm-item"><a href="#home" class="nav-cm-link">Home</a></li>
+                <li class="nav-cm-item"><a href="index.html" class="nav-cm-link">Home</a></li>
                 <li class="nav-cm-item"><a href="about.html" class="nav-cm-link">About</a></li>
-                <li class="nav-cm-item"><a href="#work" class="nav-cm-link">Portfolio</a></li>
-                <li class="nav-cm-item"><a href="contact.html" class="nav-cm-link">Contact</a></li>
+                <li class="nav-cm-item"><a href="#" class="nav-cm-link">Portfolio</a></li>
+                <li class="nav-cm-item"><a href="#contact" class="nav-cm-link">Contact</a></li>
             </ul>
 
             <ul class="nav-social-list">
@@ -101,139 +105,131 @@
         </nav>
     </header>
 
-    <!-- Intro -->
-    <section class="intro" id="home">
-        <h1 class="section-title section-title--intro">
-            Hi, I am <strong>Hector Rivero</strong>
-        </h1>
-        <p class="section-subtitle section-subtitle--intro">full-stack software developer</p>
-        <img src="img/dev-rivero-01.jpg" alt="picture of myself" class="intro-img">
-    </section>
+    <!-- Page title & breadcrumb -->
+    <div class="page-title d-flex" aria-label="Page Title" id="contact">
+        <div class="container text-left align-self-center">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="index.html">home</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="contact.html">contact</a>
+                    </li>
+                </ol>
+            </nav>
+            <h2 class="page-title-heading">Contact me</h2>
+        </div>
+    </div>
 
-    <!-- My services -->
-    <section class="my-services" id="services">
-        <h2 class="section-title section-title--services">What I do</h2>
-        <div class="services">
-            <div class="service">
-                <h3>Front-End Developer</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
+    <!-- Contact header -->
+    <section class="contact-header pt-5 pb-3">
+        <div class="container pt-3">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="contact-info">
+                        <h3 class="contact-info--title">Contact</h3>
+                        <ul class="info-list">
+                            <!--<li>
+                                <i class="fas fa-phone-alt"></i> 
+                                <a class="contact-info--link" href="tel:+1222222222">+1 (222) 222 2222</a>
+                            </li>-->
+                            <li>
+                                <i class="fas fa-envelope"></i> 
+                                <a class="contact-info--link" href="mailto:hrrm1986lt@gmail.com">hrrm.1986lt@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
-            <div class="service">
-                <h3>Back-End Developer</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-            
-            <div class="service">
-                <h3>System Analyst</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="col-md-4">
+                    <div class="contact-info">
+                        <h3 class="contact-info--title">City</h3>
+                        <a class="contact-info--link" href="https://goo.gl/maps/ZQpc3P7ZESV8QpBM7" target="_blank">Toronto, Ontario, Canada</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="contact-info">
+                        <h3 class="contact-info--title">Social</h3>
+                        <a class="social-btn social-round sb-linkedin" href="https://www.linkedin.com/in/hector-rivero-marquez-198608" target="_blank" data-toggle="tooltip" title="" data-original-title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a class="social-btn social-round sb-github" href="https://github.com/Adminrivero" target="_blank" data-toggle="tooltip" title="" data-original-title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a class="social-btn social-round sb-codepen" href="#" target="_blank" data-toggle="tooltip" title="" data-original-title="CodePen">
+                            <i class="fab fa-codepen"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <a href="#work" class="btn btn-round">My Work</a>
     </section>
 
-    <!-- About me -->
-    <section class="about-me" id="about">
-        <h2 class="section-title section-title--about">Who I am</h2>
-        <p class="section-subtitle section-subtitle--about">Software engineer based out of Toronto</p>
+    <!-- Contact form -->
+    <section class="container contact-form position-relative">
+        <div class="contact-form">
+            <div class="contact-form--body pt-3">
+                <h2 class="h3 text-center">Get in touch</h2>
+                <p class="text-muted text-center">If you wanna get in touch, please fill up the form below.</p>
 
-        <div class="about-me--body">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <a href="about.html" class="btn btn-round">Read More</a>
+                <form id="frmContact" class="needs-validation" novalidate>
+                    <div class="row pt-3">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="contact-name">
+                                    Your Name
+                                    <span class="text-danger font-weight-medium">*</span>
+                                </label>
+                                <input class="form-control" type="text" id="contact-name" placeholder="John Doe" required>
+                                <div class="invalid-feedback">Please enter your name!</div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="contact-email">
+                                    Your Email
+                                    <span class="text-danger font-weight-medium">*</span>
+                                </label>
+                                <input class="form-control" type="email" id="contact-email" placeholder="johndoe@email.com" required>
+                                <div class="invalid-feedback">Please provide a valid email address!</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="contact-subject">Subject</label>
+                                <input class="form-control" type="text" id="contact-subject" placeholder="Provide short title of you request">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-message">
+                            Message
+                            <span class="text-danger font-weight-medium">*</span>
+                        </label>
+                        <textarea class="form-control" id="contact-message" rows="7" placeholder="Your message" required></textarea>
+                        <div class="invalid-feedback">Please write a message!</div>
+                    </div>
+
+                    <div class="text-center">
+                        <button class="btn btn-contact btn-icon-left btn-gradient" type="submit">
+                            <i class="far fa-envelope text-md"></i> Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
-
-        <img src="img/dev-rivero-02.jpg" alt="Hector Rivero" class="about-me--img">
     </section>
 
-    <!-- My Work -->
-    <section class="my-work" id="work">
-        <h2 class="section-title section-title--work">My Work</h2>
-        <p class="section-subtitle section-subtitle--work">Hand-picked collection of my most recent works.</p>
-
-        <div class="portfolio">
-            <!-- Portfolio item 01 -->
-            <div class="portfolio-item">
-                <a href="#" class="portfolio-link">
-                    <img src="img/pf-default-image.jpg" alt="image of work 01" class="portfolio-img">
-                    <div class="portfolio-text">
-                        <div class="portfolio-item-title">Work Title</div>
-                        <span class="portfolio-item-subtitle">Work Subtitle</span>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Portfolio item 02 -->
-            <div class="portfolio-item">
-                <a href="#" class="portfolio-link">
-                    <img src="img/pf-default-image.jpg" alt="image of work 02" class="portfolio-img">
-                    <div class="portfolio-text">
-                        <div class="portfolio-item-title">Work Title</div>
-                        <span class="portfolio-item-subtitle">Work Subtitle</span>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Portfolio item 03 -->
-            <div class="portfolio-item">
-                <a href="#" class="portfolio-link">
-                    <img src="img/pf-default-image.jpg" alt="image of work 03" class="portfolio-img">
-                    <div class="portfolio-text">
-                        <div class="portfolio-item-title">Work Title</div>
-                        <span class="portfolio-item-subtitle">Work Subtitle</span>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Portfolio item 04 -->
-            <div class="portfolio-item">
-                <a href="#" class="portfolio-link">
-                    <img src="img/pf-default-image.jpg" alt="image of work 04" class="portfolio-img">
-                    <div class="portfolio-text">
-                        <div class="portfolio-item-title">Work Title</div>
-                        <span class="portfolio-item-subtitle">Work Subtitle</span>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Portfolio item 05 -->
-            <div class="portfolio-item">
-                <a href="#" class="portfolio-link">
-                    <img src="img/pf-default-image.jpg" alt="image of work 05" class="portfolio-img">
-                    <div class="portfolio-text">
-                        <div class="portfolio-item-title">Work Title</div>
-                        <span class="portfolio-item-subtitle">Work Subtitle</span>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Portfolio item 06 -->
-            <div class="portfolio-item">
-                <a href="#" class="portfolio-link">
-                    <img src="img/pf-default-image.jpg" alt="image of work 06" class="portfolio-img">
-                    <div class="portfolio-text">
-                        <div class="portfolio-item-title">Work Title</div>
-                        <span class="portfolio-item-subtitle">Work Subtitle</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <a href="#work" class="btn btn-round">View all Works</a>
+    <!-- Contact bottom -->
+    <section class="bg-dark contact-bottom py-5" >
+        <div class="container py-5"></div>
     </section>
 
     <!-- Footer -->
@@ -269,7 +265,16 @@
     <!-- Backdrop -->
     <div class="site-backdrop"></div>
 
+    <!-- include bootstrap js files -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <!-- include custom js file -->
     <script src="js/index.js"></script>
+
+    <script>
+        // Initialize Bootstrap's Tooltips Component 
+        $(() => $('[data-toggle="tooltip"]').tooltip());
+    </script>
 </body>
 </html>

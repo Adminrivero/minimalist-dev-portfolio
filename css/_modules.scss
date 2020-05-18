@@ -206,10 +206,10 @@
     }
 }
 
-/**************/
-/*   Skills   */
-/**************/
-.my-skills {
+/********************/
+/* Skills section   */
+/********************/
+.skills {
     .info {
         img {
             display: inline-flex;
@@ -351,7 +351,7 @@
 }
 
 /*******************/
-/* Section Contact */
+/* Contact section */
 /*******************/
 .my-contact {
     > div {
@@ -366,6 +366,341 @@
         }
         > a {
             margin-top: $spacer;
+        }
+    }
+}
+
+/******************/
+/*  Contact Info  */
+/******************/
+.contact-info {
+    margin-bottom: ($spacer * 2.625);
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+}
+.contact-info--title {
+    display: block;
+    position: relative;
+    margin-bottom: ($spacer * 1.5);
+    padding-bottom: ($spacer / 2);
+    border-bottom: 1px solid $gray-300;
+    color: $gray-700;
+    font: {
+        size: $fs-reg;
+        weight: $fw-semi-bold;
+        family: $primary-font;
+    }
+    letter-spacing: .03em;
+    text-transform: uppercase;
+    &::after {
+        display: block;
+        position: absolute;
+        bottom: -.1875rem;
+        left: 0;
+        width: 5.625rem;
+        height: .1875rem;
+        @extend .bg-gradient;
+        content: '';
+    }
+}
+.info-list {
+    padding: 0;
+    list-style: none;
+    > li {
+        position: relative;
+        padding-left: 26px;
+        > i {
+            color: $gray-500;
+            display: block;
+            position: absolute;
+            left: 0;
+            font-size: $fs-base;
+            line-height: 1.9;
+        }
+    }
+    &.lead > li { padding-left: 33px; }
+    &.text-xl > li { padding-left: 26px; }
+    &.text-lg > li { padding-left: 25px; }
+    &.text-sm > li { padding-left: 18px; }
+    &.text-xs > li { padding-left: 15px; }
+}
+.contact-info--link {
+    transition: all .25s;
+    color: $gray-500;
+    font: {
+        family: $secondary-font;
+        weight: $fw-semi-bold;
+        size: $fs-md;
+    }
+    text-decoration: none;
+    > i {
+        display: inline-block;
+        margin-top: -1px;
+        font-size: $fs-lg;
+        vertical-align: middle;
+    }
+    &:hover {
+        color: $color-primary;
+        text-decoration: none;
+    }
+    &.text-white:hover { opacity: .6; }
+}
+
+/********************/
+/*  Social Buttons  */
+/********************/
+.social-btn {
+    display: inline-block;
+    width: $fs-social-button;
+    height: $fs-social-button;
+    margin: 0;
+    transition: all .3s;
+    font-size: $fs-md;
+    line-height: $fs-social-button;
+    vertical-align: middle;
+    text: {
+        align: center !important;
+        decoration: none;
+    }
+}
+.sb-linkedin {
+    color: #0976b4 !important;
+    font-size: $fs-base;
+    &:hover, &.hover { color: #0976b4 !important; }
+}
+.sb-github {
+    color: #ac32e4 !important;
+    font-size: $fs-base;
+    &:hover, &.hover { color: #ac32e4 !important; }
+}
+.sb-codepen {
+    color: #000000 !important;
+    font-size: $fs-base;
+    &:hover, &.hover { color: #000000 !important; }
+}
+.sb-facebook {
+    color: #3b5998 !important;
+    &:hover, &.hover { color: #3b5998 !important; }
+}
+.sb-reddit {
+    color: #ff4500 !important;
+    font-size: 1.1em;
+    &:hover, &.hover { color: #ff4500 !important; }
+}
+.sb-stackoverflow {
+    color: #fe7a15 !important;
+    font-size: 1.1em !important;
+    &:hover, &.hover { color: #fe7a15 !important; }
+}
+.sb-youtube {
+    color: #e52d27 !important;
+    &:hover, &.hover { color: #e52d27 !important; }
+}
+.sb-light-skin { color: $white !important; }
+.social-round {
+    margin: {
+        right: .625rem;
+        bottom: .625rem;
+    }
+}
+.social-round {
+    border: 3px solid $gray-300;
+    border-radius: 50%;
+    line-height: ($fs-social-button - .3125);
+    &.sb-light-skin {
+        border-color: rgba($white, .18);
+    }
+    &:hover, &.hover {
+        border-color: transparent;
+        background-color: $white;
+        box-shadow: $box-shadow-social-button;
+    }
+}
+.text-center {
+    .social-round {
+        margin: {
+            right: (.625rem / 2);
+            bottom: (.625rem / 2);
+        }
+    }
+}
+.text-right {
+    .social-round {
+        margin: {
+            right: 0;
+            left: .625rem;
+        }
+    }
+}
+
+/***********/
+/*  Forms  */
+/***********/
+.form-control {
+    font-size: $fs-reg;
+    box-shadow: none;
+    // Hover state
+    &:hover:not(:focus):not([readonly]):not([disabled]) {
+        border-color: $input-border-color;
+    }
+    // Focus state
+    &:focus {
+        border-color: $color-primary;
+        box-shadow: $input-box-shadow !important;
+        &[readonly],
+        &[disabled] {
+            border-color: $input-border-color;
+            box-shadow: none !important;
+        }
+    }
+}
+// Readonly / disabled
+.form-control {
+    &[disabled] { cursor: not-allowed; }
+}
+// Label
+label:not(.form-check-label):not(.custom-control-label):not(.custom-file-label) {
+    padding-left: $input-padding-x;
+    font: {
+        size: $fs-md;
+        weight: $fw-semi-bold;
+    }
+    letter-spacing: .06em;
+    text-transform: uppercase;
+}
+// Form group
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+// Form validation
+.was-validated {
+    .form-control {
+        &:valid,
+        &.is-valid {
+            border-color: darken($border-color, 1%) !important;
+            &:focus { border-color: $white !important; }
+        }
+        &:invalid,
+        &.is-invalid {
+            border-color: $color-danger !important;
+            &:focus { border-color: $white !important; }
+        }
+    }
+}
+.valid-feedback,
+.invalid-feedback {
+    margin-top: .3rem;
+    font-size: 90%;
+}
+.valid-feedback { color: $color-success; }
+.invalid-feedback { color: $color-danger; }
+.valid-tooltip,
+.invalid-tooltip {
+    border-radius: 0;
+    font-size: 90%;
+}
+.valid-tooltip { background-color: $color-success; }
+.invalid-tooltip { background-color: $color-danger; }
+
+/******************/
+/*  Contact Form  */
+/******************/
+.contact-form {
+    background-color: $white;
+    box-shadow: $box-shadow-contact-form;
+    .contact-form--body { 
+        padding: 2.5rem 1.5rem 1.875rem;
+        > p {
+            font: {
+                family: $primary-font;
+                weight: $fw-regular;
+                size: $fs-reg;
+            }
+        }
+    }
+    .contact-form--footer {
+      padding: 15px 1.5rem;
+      border-top: 1px solid $gray-300;
+    }
+
+    .btn {
+        position: relative;
+        height: $btn-height;
+        // transform: translateZ(0);
+        border: 0;
+        font-size: $button-font-size;
+        letter-spacing: $btn-letter-spacing;
+        cursor: pointer;
+        z-index: 1;
+        text: {
+            transform: $btn-text-transform;
+            decoration: none;
+        }
+        touch-action: manipulation;
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+        &::before,
+        &::after {
+            transition: .2s;
+        }
+        &:active,
+        &:active::before,
+        &:active::after {
+            transition: .12s !important;
+        }
+        > i {
+            display: inline-block;
+            font-size: 1.1em;
+            vertical-align: middle;
+        }
+    }
+}
+
+// Button contact
+.btn-contact {
+    border-radius: floor($btn-height / 2);
+    &:hover {
+        color: $white;
+        box-shadow: 0 12px 18.8px 1.2px rgba(172,50,228,0.24);
+    }
+    &.btn-icon-left {
+        padding-left: 46px;
+        i {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 7px;
+            width: 31px;
+            height: 31px;
+            margin-top: -15px;
+            transition: $btn-transition;
+            border-radius: 50%;
+            line-height: 30px;
+            color: $color-primary;
+            background-color: $white !important;
+            &::before { margin-left: 2px; }
+        }
+    }
+    &.btn-lg {
+        border-radius: floor($btn-height-lg / 2);
+    }
+    &.btn-sm {
+        border-radius: floor($btn-height-sm / 2);
+        &.btn-icon-left {
+            padding-left: 34px;
+            i {
+                left: 2px;
+                width: 26px;
+                height: 26px;
+                margin-top: -13px;
+                line-height: 26px;
+            }
         }
     }
 }

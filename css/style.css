@@ -471,6 +471,14 @@ header {
         padding-right: calc(200px + 3em);
     }
 
+    .about-me--body {
+        text-align: center;
+    }
+
+    .about-me--body > p {
+        text-align: justify;
+    }
+
     .about-me--img {
         grid-area: img;
         position: relative;
@@ -690,12 +698,10 @@ header {
     opacity: 1;
 }
 
-
 /**************/
 /* About page */
 /**************/
-
-.page-title {
+#about {
     background-image: url(../img/page-title-pattern.png);
 }
 
@@ -703,10 +709,37 @@ header {
     max-width: 1170px;
 }
 
-.my-skills > .container-fluid {
+.skills > .container-fluid {
     max-width: 1400px;
 }
 
 .my-contact > .container {
     background-image: url(../img/dotted-map.png);
+}
+
+/****************/
+/* Contact page */
+/****************/
+#contact {
+    /* background-image: url(../img/page-title-pattern2.png); */
+    background-image: url(../img/contacts-bg.png);
+    background-position: center;
+}
+
+.contact-header,
+.contact-form {
+    padding: 0;
+}
+
+.contact-header > .container {
+    max-width: 1170px;
+}
+
+section.contact-form {
+    max-width: 1170px;
+}
+
+.contact-form {
+    margin-bottom: -110px;
+    z-index: 5;
 }
