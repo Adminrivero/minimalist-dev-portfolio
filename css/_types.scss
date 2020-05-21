@@ -48,7 +48,7 @@ $fs-xs: .6875rem;   /* 11px */
 $fs-sm: .75rem;     /* 12px */
 $fs-md: .875rem;    /* 14px */
 $fs-base: 1rem;     /* 16px */
-$fs-reg: 1.125rem;  /* 16px */
+$fs-reg: 1.125rem;  /* 18px */
 $fs-lg: 1.25rem;    /* 20px */
 $fs-xl: 1.5rem;     /* 24px */
 $fs-xxl: 1.75rem;   /* 28px */
@@ -263,3 +263,10 @@ $btn-box-shadow:              none;
 $btn-focus-box-shadow:        none;
 $btn-active-box-shadow:       none;
 $btn-disabled-opacity:        .5;
+
+/* Pagination */
+$pagination-link-height:        36px !default;
+$navigation-link-height:        44px !default;
+$pagination-link-color:         $gray-700 !default;
+$pagination-link-active-color:  $color-primary !default;
+$pagination-link-box-shadow:    0 .75rem 1.25rem .0625rem rgba($gray-700, .11) !default;

@@ -14,6 +14,14 @@
     --fw-semi-bold: 600;
     --fw-bold: 900;
     /* setup custom colors */
+    --clr-white: #ffffff;
+    --clr-gray-100: #f5f5f5;
+    --clr-gray-300: #e7e7e7;
+    --clr-gray-500: #8c8c8c;
+    --clr-gray-700: #404040;
+    --clr-gray-800: #343b43;
+    --clr-gray-900: #30363d;
+    --clr-black: #000000;
     --clr-light: #fff;
     --clr-gray: #f5f5f5;
     --clr-dark: #343b43;
@@ -22,6 +30,15 @@
     --clr-btn: #ac32e4;
     --clr-btn-active: #921ac9;
     /* setup font size */
+    --fs-nano: .5625rem; /* 9px */ 
+    --fs-xs: .6875rem;   /* 11px */ 
+    --fs-sm: .75rem;     /* 12px */
+    --fs-md: .875rem;    /* 14px */
+    --fs-base: 1rem;     /* 16px */
+    --fs-reg: 1.125rem;  /* 18px */
+    --fs-lg: 1.25rem;    /* 20px */
+    --fs-xl: 1.5rem;     /* 24px */
+    --fs-xxl: 1.75rem;   /* 28px */
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
@@ -51,8 +68,8 @@
     }
 }
 
-  /*****************/
- /* General Style */
+/*****************/
+/* General Style */
 /*****************/
 html {
     scroll-behavior: smooth;
@@ -339,11 +356,9 @@ header {
 .hamburger::before { top: 7px; }
 .hamburger::after { bottom: 7px; }
 
-
 /*****************/
 /* Intro Section */
 /*****************/
-
 .intro {
     position: relative;
 }
@@ -386,7 +401,6 @@ header {
 /********************/
 /* Services Section */
 /********************/
-
 .my-services {
     background-color: var(--clr-dark);
     background-image: url(../img/dev-services-bg.jpg);
@@ -436,7 +450,6 @@ header {
 /*****************/
 /* About Section */
 /*****************/
-
 .about-me {
     max-width: 1000px;
     margin: 0 auto;
@@ -489,7 +502,6 @@ header {
 /*******************/
 /* My Work Section */
 /*******************/
-
 .my-work {
     background-color: var(--clr-dark);
     opacity: .9;
@@ -584,10 +596,9 @@ header {
     font-size: var(--fs-body);
 }
 
-/**********/
-/* Footer */
-/**********/
-
+/****************/
+/* Footer style */
+/****************/
 .footer {
     color: var(--clr-light);
     text-align: center;
@@ -699,7 +710,7 @@ header {
 }
 
 /**************/
-/* About page */
+/* About Page */
 /**************/
 #about {
     background-image: url(../img/page-title-pattern.png);
@@ -718,10 +729,9 @@ header {
 }
 
 /****************/
-/* Contact page */
+/* Contact Page */
 /****************/
 #contact {
-    /* background-image: url(../img/page-title-pattern2.png); */
     background-image: url(../img/contacts-bg.png);
     background-position: center;
 }
@@ -742,4 +752,96 @@ section.contact-form {
 .contact-form {
     margin-bottom: -110px;
     z-index: 5;
+}
+
+/****************/
+/* Project Page */
+/****************/
+#project {
+    background-image: url(../img/page-title-pattern1.png);
+}
+
+.page-content {
+    display: block;
+}
+
+.page-content>section {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 3em 2em;
+    position: relative;
+    display: block;
+}
+
+.page-control {
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 200;
+}
+
+.page-control .prev-btn,
+.page-control .next-btn {
+    position: fixed;
+    top: 50%;
+}
+
+.page-control .prev-btn {
+    left: 2em;
+}
+
+.page-control .next-btn {
+    right: 2em;
+}
+
+.btn-back>i {
+    font-size: 1rem;
+    color: var(--clr-dark);
+}
+
+.btn-back>i:hover {
+    color: var(--clr-accent);
+}
+
+.prev-meta>span {
+    color: var(--clr-gray-500);
+    font-size: .925rem;
+    font-weight: var(--fw-reg);
+    opacity: .7;
+}
+
+.middle-meta {
+    display: none;
+}
+
+.middle-meta>a {
+    color: var(--clr-gray-500);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: var(--fw-semi-bold);
+    opacity: .8;
+}
+
+.middle-meta>a:focus {
+    outline: none;
+}
+
+.middle-meta>a>i {
+    display: inline-block;
+    margin-right: .1rem;
+    color: var(--clr-accent);
+}
+
+@media (min-width: 600px) {
+    .middle-meta {
+        display: block;
+    }
+}
+
+.post-meta>span>strong {
+    font-size: var(--fs-base);
+    font-weight: var(--fw-semi-bold);
 }
