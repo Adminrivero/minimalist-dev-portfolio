@@ -187,12 +187,9 @@ function loadMorePortfItems() {
     const elPortfInner = elPortfolio.getElementsByClassName("portfolio")[0];
     let counter = 0, index = 0, numItems = elPortfInner.children.length;
 
-    console.log("numItems: "+numItems);
-    console.log("arrProject.length: "+arrProject.length);
     if (numItems < arrProject.length) {
         index = numItems;
         while ((index < arrProject.length) && (counter < 6)) {
-            console.log("loadProject iteration: "+index);
             projectItem = arrProject[index];
             elPortfInner.innerHTML += `<div class="portfolio-item">
                                         <a class="portfolio-link" data-project-id="${projectItem.id}">
@@ -238,22 +235,21 @@ function getProject() {
 }
 
 function populateView(objProject) {
-    console.log("function populateView called");
     const elProjectMeta = document.querySelector('#projectMeta');
     const elProjectGallery = document.querySelector('#projectGallery');
     const elProjectNav = document.querySelector('#projectNav');
     const elProjectInfo = document.querySelector('#projectInfo');
 
-    // > set project's title
+    // step 0 > set project's title
     (elProject.firstElementChild.lastElementChild.getElementsByTagName("strong")[0]).innerHTML = objProject.title;
-    // > fill up project's metadata
+    // step 1 > fill up project's metadata
     elProjectMeta.firstElementChild.firstElementChild.lastElementChild.innerHTML = objProject.metaDate;
     elProjectMeta.firstElementChild.lastElementChild.lastElementChild.innerHTML = objProject.metaCategory;
     elProjectMeta.children[1].firstElementChild.lastElementChild.innerHTML = objProject.metaLikes;
     elProjectMeta.lastElementChild.children[1].href = "https://www.facebook.com/sharer/sharer.php?u=" + window.location.href;
     elProjectMeta.lastElementChild.children[2].href = "https://twitter.com/home?status=" + window.location.href;
     elProjectMeta.lastElementChild.children[3].href = "https://pinterest.com/pin/create/button/?url=" + window.location.href + "&media=&description=";
-    // > fill up project's gallery
+    // step 2 > fill up project's gallery
     let elCarouselInner = elProjectGallery.children[1];
     // remove all demo slides
     while (elCarouselInner.hasChildNodes()) {  
@@ -272,7 +268,7 @@ function populateView(objProject) {
                     </div>`;
     });
     elCarouselInner.innerHTML = htmlSlides;
-    // > fill up projects navigation
+    // step 3 > fill up projects navigation
     if (objProject.prevProject) {
         elProjectNav.firstElementChild.firstElementChild.addEventListener('click', () => {
             this.location.assign("./portfolio-item.html?id="+objProject.prevProject.id);
@@ -293,7 +289,7 @@ function populateView(objProject) {
     }else {
         elProjectNav.lastElementChild.firstElementChild.style.display = "none";
     }
-    // > fill up project's details
+    // step 4 > fill up project's details
     elProjectInfo.firstElementChild.firstElementChild.lastElementChild.innerHTML = objProject.desc;
     if (objProject.techList && objProject.techList.length) {
         elProjectInfo.firstElementChild.children[1].lastElementChild.remove();
@@ -341,7 +337,7 @@ function genAlert(title = "Warning!", text = "Warning message.", bottomText = nu
 
 function likeIt(element) {
     let likes = parseInt(element.lastElementChild.textContent, 10) + 1;
-    // update project's metadata
+    // update the project metadata and save it to the database of your choice (Ex: local JSON file)
     //ToDo ...
     // update view element
     element.lastElementChild.innerHTML = likes;
