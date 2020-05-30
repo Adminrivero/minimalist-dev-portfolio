@@ -546,6 +546,7 @@ header {
 
 .portfolio-link {
     text-decoration: none;
+    cursor: pointer;
 }
 
 .portfolio-img {
@@ -775,25 +776,12 @@ section.contact-form {
     display: block;
 }
 
-.page-control {
-    display: none;
-    position: absolute;
-    width: 100%;
-    z-index: 200;
+.prev-btn>a {
+    cursor: pointer;
 }
 
-.page-control .prev-btn,
-.page-control .next-btn {
-    position: fixed;
-    top: 50%;
-}
-
-.page-control .prev-btn {
-    left: 2em;
-}
-
-.page-control .next-btn {
-    right: 2em;
+.next-btn>a {
+    cursor: pointer;
 }
 
 .btn-back>i {
