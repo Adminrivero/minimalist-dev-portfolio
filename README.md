@@ -2,7 +2,23 @@
 
 A professional, responsive, and minimalist personal portfolio website template designed to showcase web development projects and professional experience.
 
-![Portfolio Preview](img/portfolio-preview.png) *(Note: Replace with a screenshot of your site)*
+**[✨ View Live Demo ✨](https://adminrivero.github.io/minimalist-dev-portfolio/)**
+
+---
+
+## 📽️ Preview
+
+<div align="center">
+  <a href="https://adminrivero.github.io/minimalist-dev-portfolio/">
+    <img src="img/portfolio-demo.gif" alt="Live Portfolio Demo" width="80%">
+  </a>
+  <p>
+    <em>
+      👆 Click the preview to visit the live site!<br>
+      (Featuring smooth scroll animations and responsive design)
+    </em>
+  </p>
+</div>
 
 ## 🚀 Features
 
@@ -47,6 +63,14 @@ A modern web browser (Chrome, Firefox, Safari, or Edge).
    git clone https://github.com/Adminrivero/minimalist-dev-portfolio.git
    ```
 2. Open `index.html` in your browser to view the site locally.
+
+## ⚙️ How to Use This Template
+
+1. **Create your Repo:** Click the green **"Use this template"** button at the top of this page.
+2. **Clone it:** `git clone https://github.com/Adminrivero/minimalist-dev-portfolio.git`
+3. **Personalize:** - Open `index.html` and update the text with your name and bio.
+   - Replace the images in the `/img` folder with your own project screenshots.
+4. **Deploy:** Go to **Settings > Pages** in your new repo to host it online for free!
 
 ## 📝 License
 This project is open-source and available under the [MIT License](LICENSE).
