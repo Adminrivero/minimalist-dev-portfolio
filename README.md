@@ -1,4 +1,4 @@
-# Software Developer - Personal Portfolio Template
+# Software Developer - Personal Portfolio
 
 A professional, responsive, and minimalist personal portfolio website template designed to showcase web development projects and professional experience.
 
