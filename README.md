@@ -1,4 +1,4 @@
-# Hector Rivero - Personal Portfolio
+# Software Developer - Personal Portfolio Template
 
 A professional, responsive, and minimalist personal portfolio website template designed to showcase web development projects and professional experience.
 
@@ -44,7 +44,7 @@ A modern web browser (Chrome, Firefox, Safari, or Edge).
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Adminrivero/hector-rivero-portfolio.git
+   git clone https://github.com/Adminrivero/minimalist-dev-portfolio.git
    ```
 2. Open `index.html` in your browser to view the site locally.
 
